@@ -1,22 +1,23 @@
-let myName;
-let myAge;
-let isStudent;
+// Augmented Assignment Operators
 
-myName = "Daniyal";
-myAge = 22;
-isStudent = true;
 
-console.log(myName);
-console.log(myAge);
-console.log(isStudent);
+// The following is called augmented assinments
 
-console.log("My name is ", myName);
-console.log("I am " , myAge , "Years Old");
-console.log("Student ", isStudent);
+let x = 10;
+let y = 15;
 
-console.log("This is a \"double quoted\" string in a Sentence/String."); // If double quoted is needed it will be done like this
 
-// Changing values of html tags from js file
+x +=x;
+y++;
+console.log(x);
+console.log(y);
 
-document.getElementById("p1").innerHTML = " Hi how are you.";
-document.getElementById("thisH1").innerHTML = "Daniyal Muhammad Khan";
+x -=10;
+y--;
+console.log(x);
+console.log(y);
+
+x *=3;
+--y;
+console.log(x);
+console.log(y);
