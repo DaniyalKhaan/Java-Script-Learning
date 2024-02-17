@@ -1,23 +1,23 @@
-// Augmented Assignment Operators
+// Taking Input from the user
+
+// There are two ways both are given below the first one in easy but not a good approach
 
 
-// The following is called augmented assinments
 
-let x = 10;
-let y = 15;
+// Fist Way: not a good approach
+// let userName = window.prompt("What is your Name");
+// console.log(userName);
 
 
-x +=x;
-y++;
-console.log(x);
-console.log(y);
+// Second Way: through html elements(like textfield etc)
 
-x -=10;
-y--;
-console.log(x);
-console.log(y);
+let inputThroughHtml;
 
-x *=3;
---y;
-console.log(x);
-console.log(y);
+document.getElementById("button").onclick = function() {
+
+    inputThroughHtml = document.getElementById("textField").value;
+    console.log(inputThroughHtml);
+
+    document.getElementById("onlyLabel").innerHTML = "What about the wheather in " + inputThroughHtml;
+}
+
