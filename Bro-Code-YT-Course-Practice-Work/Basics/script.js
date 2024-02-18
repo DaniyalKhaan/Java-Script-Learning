@@ -1,19 +1,32 @@
-// Topic Const (keyword)
-// const keyword make variable constant means it can not be change later in the program, you will give value only once then 
-// if try to change its value it will generate an error
+// Topic : Math Class/Object in java script
 
-// this is usefull in cases where we want to dont change the value of some variabel like, background theme, a color,
-// or value of pi
+// we can use this object of build in Math class to do some tasks, like rounding a decial number, finding maximum-minimum
+// between variables or numbers, roundiing to bottom number, rounding to top number, square root of a number/variable
+// etc etc
 
-// note: for const variable it is a good approach to use uppercase naming
 
-// IMPLEMENTATON
+// implementation: It can be used by calling object of Math class and accecing function by dot, given below
 
-const COLOR = "This Color";
+// ROunding a decimal Number
+let x = 2.9993;
 
-const PI = 3.1415926;
+x = Math.round(x);
 
-// Now if someone try to change value to this variables, an error will be generated.
+console.log(x);
 
-console.log(COLOR);
-console.log(PI);
+// These are some more functionalites which can be done using Math object;
+
+z = Math.sqrt(x);
+z = Math.max(23, 4, x);
+z = Math.min(23,45,x);
+// floor function will round up decimal downwords like 4.7 will be rounded to just 4;
+z = Math.floor(x);
+// ceil function will round up decimal number upward e.x 4.7 will become 5, also 4.1 will become 5. it just 
+// round up to the next number
+z = Math.ceil(x);
+let power = Math.pow(4, 4);
+z = Math.PI;
+
+console.log(power);
+console.log("Pi : ", z);
+
