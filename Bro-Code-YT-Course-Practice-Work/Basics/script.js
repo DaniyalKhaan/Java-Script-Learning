@@ -1,32 +1,33 @@
-// Topic : Math Class/Object in java script
+// Topic : Practice Program for finding a hypothenuse of a traingle
 
-// we can use this object of build in Math class to do some tasks, like rounding a decial number, finding maximum-minimum
-// between variables or numbers, roundiing to bottom number, rounding to top number, square root of a number/variable
-// etc etc
+// The formula to find hyponthenuse is hypothenuse = square root of ( base square + height square)
 
+// so lets do this:
 
-// implementation: It can be used by calling object of Math class and accecing function by dot, given below
+let hyponthenuse;
+let base;
+let height;
 
-// ROunding a decimal Number
-let x = 2.9993;
+// height = window.prompt("Enter size of Height of the traingle in numbers");
+// // Note: Window.prompy take input as string, so make sure to convert the string to number before applying the 
+// // formula/operations
+// height = Number(height);
 
-x = Math.round(x);
+// base = window.prompt("Enter Base Size of the traingle in numbers");
+// // Converting the string to Numeber
+// base = Number(base);
+// hyponthenuse  = Math.sqrt(Math.pow(base, 2) + Math.pow(height, 2));
+// console.log("The size of the hyponthenuse is: ", hyponthenuse);
 
-console.log(x);
+// Done. I have verified it is working absolutely fine, but lets make this more fine by using html textboxes for data 
+// Entry
 
-// These are some more functionalites which can be done using Math object;
+document.getElementById("summitButton").onclick = function(){
 
-z = Math.sqrt(x);
-z = Math.max(23, 4, x);
-z = Math.min(23,45,x);
-// floor function will round up decimal downwords like 4.7 will be rounded to just 4;
-z = Math.floor(x);
-// ceil function will round up decimal number upward e.x 4.7 will become 5, also 4.1 will become 5. it just 
-// round up to the next number
-z = Math.ceil(x);
-let power = Math.pow(4, 4);
-z = Math.PI;
+    base = document.getElementById("baseTextBox").value;
 
-console.log(power);
-console.log("Pi : ", z);
+    height = document.getElementById("heightTextBox").value;
 
+    hyponthenuse = Math.sqrt(Math.pow(base, 2) + (Math.pow(height, 2)));
+    document.getElementById("labelForHyp").innerHTML ="Result, hypothenuse Size: " + hyponthenuse;
+}
