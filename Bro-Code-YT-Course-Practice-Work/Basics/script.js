@@ -1,23 +1,49 @@
-// Topic : checked property,
-// There is a propery named .checked in js by which we can find out that radio button or
-// a checkbox is selected or not selected.
+// Topic: Switch Statemant:
 
+let grade = 'D';
 
+switch(grade){
+    case('A'):
+    case(''):
+    console.log("You did great in the exam.")
+    break;
+    case('B'):
+    case('b'):
+    console.log("You did great in the exam.")
+    break;
+    case('C'):
+    case('c'):
+    console.log("You did good in the exam.")
+    break;
+    case('D'):
+    case('d'):
+    console.log("You Failed the exam.")
+    break;
+    default:
+    console.log(grade + " is not a letter grade!")
 
-document.getElementById("checkBoxBtnsSummit").onclick = function (){
-    if (document.getElementById("studentCheckBox").checked) {
-        console.log("Welcome Student. In which subject you want to get tuition")
-    } else if (document.getElementById("teacherCheckBox").checked){
-        console.log("Welcome Sir, How many of teaching experience do you have, and what are your experties")
-    }
+    
 }
 
+let percentage = 72.5;
 
-document.getElementById("radioBtnsSummit").onclick = function(){
-    const maleRadioButton = document.getElementById("maleRadioButton");
-    if (maleRadioButton.checked){
-        console.log("Male is selected: ")
-    } else if (document.getElementById("femaleRadioButton").checked){
-        console.log("Female is selected: ")
-    }
+switch (true){
+    case (percentage >= 90):
+        console.log("You got grade A+");
+        break;
+    case (percentage >= 80):
+        console.log("You got grade A");
+        break;
+    case (percentage >= 70):
+        console.log("You got grade B");
+        break;
+    case (percentage >= 60):
+        console.log("You got grade C");
+        break;
+    case (percentage < 60):
+        console.log("You got grade D");
+        break;
+        
+        
+    
 }
