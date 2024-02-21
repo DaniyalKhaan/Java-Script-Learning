@@ -1,21 +1,31 @@
-// Topic: return statement property in functions
+// Topic: Variables scope(Where variable is accessible) in java script
 
-// we can return something from a function, like we can declare return statement inside a function and
-// whenever we call it from some place, it will return the value which was declared to be return to that 
-// spot(line of code) from where the function was called.
+// Following are the scopes of all the three types of variables in JS
 
-let width = window.prompt("Enter the width");
-let height = window.prompt("Enter the height");
+// let: let vaiables have block scope{} it cannot be accessible outside ofthe block in which it was declared
 
-let area = someFunction(width, height);
-// we are assigning here the value of area by calling a method, which have return statment, so that
-// the return statement is returning the value of result which is assigning to the area operator through
-// = operator.
+// var: var variables can be access from outside of the block, but it cannot escape a funtion means it can be accessible
+// from blocks{} of for loop or any other {} except of function() blocks {}.
 
-function someFunction(a, b){
+// global variables: Global variables are the variables in java script that are declared outside of the blocks,(block independent)
+// whole program can access global variables.
 
-    let result = a * b;
-    return result;
+// One thing to keep notice on is that using var for global variables can make problems with browser default window 
+// variable names, Means if someone assign names samilar to window variables name it can assign value to the window
+// variable name and it can cause problem. In order to avoid this issue we can make let variables globall.
+
+
+let letGloballVariable = "sbc";
+
+var varGlobalVariable = "This can make problems if the name uses is similar to window object variables";
+
+for (var dani = 0; dani<10; dani++){
+
 }
+console.log(dani);
+// we can access dani even from outside of the blocks, this is because it is a var variable.
 
-console.log("Area : " , area);
+function ifVarIsAccessible(){
+    var yal = "This wil not be accessible outside of this function.";
+}
+console.log(yal);
