@@ -1,27 +1,45 @@
-// Topic: Locale Method(toLocaleString), by this we can format a string to different countries counting style (like 
-// commas, etc), currency type and more
+// Topic: Number Guessing Game
 
-// we have to put .toLocaleString() after the string which we want to format and then inside the parameters of this 
-// method we will spacify (locale , {options});
+let randomNumber =  Math.round(Math.random() * 100 + 1);
+let guess = 0;
+let guessTryCounter = 0;
 
-// Exmaple
+function updateLabel() {
+    // Assume you have logic here to generate a new expression
+    var newExpression = generateNewExpression(); // Implement this function
 
-let number = 123456789.234;
+    // Update the label text with the new expression
+    document.getElementById("onlyH5").textContent = newExpression;
+}
 
-// number = number.toLocaleString("en-US");
+// Example function to generate a new expression (replace with your own logic)
+function generateNewExpression() {
+    // Here you can have your logic to generate a new expression dynamically
+    // For demo purposes, let's just return a static string
+    return "The number is higher"; // Replace with your logic
+}
 
-console.log(number);
-// the output is 123,456,789.234, using this method it is automatically formated to US counting style, we can do 
-// alot of more styles like the following will format the string according to indian counting rules
+document.getElementById("summitButton").onclick = function(){
 
-// number =  number.toLocaleString("hi-IN");
-console.log(number);
-/*
-number = number.toLocaleString("en-US", {style: "currency", currency: "INR"});
-number = number.toLocaleString("en-US", {style: "currency", currency: "USD"});
-console.log(number);
-*/
+    guessTryCounter++;
+    
+    guess = document.getElementById("inputGuess").value;
+    console.log(guess);
+    
+    if (randomNumber > guess){
 
+        // document.getElementById("onlyH5").innerHTML = (`The number is higher:`);
+        updateLabel();
 
-number = number.toLocaleString("en-US", {style: "unit", unit: "celsius"});
-console.log(number);
+    } else if (randomNumber < guess ){
+        document.getElementById("onlyH5").innerHTML = (`The number is smaller:`);
+    }
+    else if (randomNumber == guess){
+        document.getElementById("onlyH5").innerHTML = (`Congratulation thats correct guess, You have completed
+        the guess in ${guess} guesses.`);
+
+    } 
+
+    
+
+}
