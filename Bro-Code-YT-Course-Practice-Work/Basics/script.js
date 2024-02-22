@@ -1,24 +1,23 @@
-// Topic: Template Literal in java Script
+// Topic: Locale Method(toLocaleString), by this we can format a string to different countries counting style (like 
+// commas, etc), currency type and more
 
-// Template literals are back-ticks(``), it can be used to define, concate a string without quotes.
-// template literals(``) are more easy to handle string concatation than quotes("")
+// we have to put .toLocaleString() after the string which we want to format and then inside the parameters of this 
+// method we will spacify (locale , {options});
 
-// template literals alows string to accept variables , expression etc more easliy than quotes
+// Exmaple
 
-// Syntax:
+let number = 123456789.234;
 
-let iAmString = `Hi I am template string`;
-console.log(iAmString);
+// number = number.toLocaleString("en-US");
 
-// Example of embedding variables using template literals
+console.log(number);
+// the output is 123,456,789.234, using this method it is automatically formated to US counting style, we can do 
+// alot of more styles like the following will format the string according to indian counting rules
 
-let price = 100;
-let discout = 20;
-let total = price - discout;
+// number =  number.toLocaleString("hi-IN");
+console.log(number);
 
-console.log(`Original price:  ${price}`);
-console.log(`Discout you got:  ${discout}`);
-console.log(`Amount to Pay: $${total}`);
+number = number.toLocaleString("en-US", {style: "currency", currency: "INR"});
+number = number.toLocaleString("en-US", {style: "currency", currency: "USD"});
+console.log(number);
 
-// see by using template string/literals we can embed string(multiple string), more easily
-// when to embed a variable use this syntax ${variableName} inside the back-ticks(``)
