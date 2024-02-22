@@ -16,8 +16,12 @@ console.log(number);
 
 // number =  number.toLocaleString("hi-IN");
 console.log(number);
-
+/*
 number = number.toLocaleString("en-US", {style: "currency", currency: "INR"});
 number = number.toLocaleString("en-US", {style: "currency", currency: "USD"});
 console.log(number);
+*/
 
+
+number = number.toLocaleString("en-US", {style: "unit", unit: "celsius"});
+console.log(number);
