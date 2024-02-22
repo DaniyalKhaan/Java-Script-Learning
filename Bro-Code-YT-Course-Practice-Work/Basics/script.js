@@ -1,45 +1,28 @@
-// Topic: Number Guessing Game
+// Topic : Arrays
 
-let randomNumber =  Math.round(Math.random() * 100 + 1);
-let guess = 0;
-let guessTryCounter = 0;
 
-function updateLabel() {
-    // Assume you have logic here to generate a new expression
-    var newExpression = generateNewExpression(); // Implement this function
 
-    // Update the label text with the new expression
-    document.getElementById("onlyH5").textContent = newExpression;
-}
+// syntax:
 
-// Example function to generate a new expression (replace with your own logic)
-function generateNewExpression() {
-    // Here you can have your logic to generate a new expression dynamically
-    // For demo purposes, let's just return a static string
-    return "The number is higher"; // Replace with your logic
-}
+let fruits = ["apple", "banana", "orange", "peach"];
 
-document.getElementById("summitButton").onclick = function(){
 
-    guessTryCounter++;
-    
-    guess = document.getElementById("inputGuess").value;
-    console.log(guess);
-    
-    if (randomNumber > guess){
+// there are some usefull properties of Arrays which are given below
 
-        // document.getElementById("onlyH5").innerHTML = (`The number is higher:`);
-        updateLabel();
 
-    } else if (randomNumber < guess ){
-        document.getElementById("onlyH5").innerHTML = (`The number is smaller:`);
-    }
-    else if (randomNumber == guess){
-        document.getElementById("onlyH5").innerHTML = (`Congratulation thats correct guess, You have completed
-        the guess in ${guess} guesses.`);
+// 4 +ing And -ing elements in array
+fruits.unshift("WaterMeloon");  // add new element to the start of Array
+fruits.shift();       // remove/delete first element of Array
+fruits.push("Palm Grenade"); // add an element to the last of the Array
+fruits.pop();        // remove/delete last element of the Array
 
-    } 
+fruits.length;   // by this we can see the length of the array and also can assign it some variables
+// Note: .length returns the total numbers of elements present in an Array, it is not like indexes it just return the total
+// numbers of elements inside that array
 
-    
 
-}
+fruits.indexOf("orange");
+
+
+
+console.log(fruits.indexOf("orange"));
