@@ -1,31 +1,24 @@
-// Topic: Variables scope(Where variable is accessible) in java script
+// Topic: Template Literal in java Script
 
-// Following are the scopes of all the three types of variables in JS
+// Template literals are back-ticks(``), it can be used to define, concate a string without quotes.
+// template literals(``) are more easy to handle string concatation than quotes("")
 
-// let: let vaiables have block scope{} it cannot be accessible outside ofthe block in which it was declared
+// template literals alows string to accept variables , expression etc more easliy than quotes
 
-// var: var variables can be access from outside of the block, but it cannot escape a funtion means it can be accessible
-// from blocks{} of for loop or any other {} except of function() blocks {}.
+// Syntax:
 
-// global variables: Global variables are the variables in java script that are declared outside of the blocks,(block independent)
-// whole program can access global variables.
+let iAmString = `Hi I am template string`;
+console.log(iAmString);
 
-// One thing to keep notice on is that using var for global variables can make problems with browser default window 
-// variable names, Means if someone assign names samilar to window variables name it can assign value to the window
-// variable name and it can cause problem. In order to avoid this issue we can make let variables globall.
+// Example of embedding variables using template literals
 
+let price = 100;
+let discout = 20;
+let total = price - discout;
 
-let letGloballVariable = "sbc";
+console.log(`Original price:  ${price}`);
+console.log(`Discout you got:  ${discout}`);
+console.log(`Amount to Pay: $${total}`);
 
-var varGlobalVariable = "This can make problems if the name uses is similar to window object variables";
-
-for (var dani = 0; dani<10; dani++){
-
-}
-console.log(dani);
-// we can access dani even from outside of the blocks, this is because it is a var variable.
-
-function ifVarIsAccessible(){
-    var yal = "This wil not be accessible outside of this function.";
-}
-console.log(yal);
+// see by using template string/literals we can embed string(multiple string), more easily
+// when to embed a variable use this syntax ${variableName} inside the back-ticks(``)
