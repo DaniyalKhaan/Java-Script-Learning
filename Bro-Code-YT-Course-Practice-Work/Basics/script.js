@@ -1,38 +1,19 @@
-// Topic: 2d Arrays
+// Topic : ... (spread operator)
+// spread operator (...) makes things very easy when we are dealing with Arrays and
+// String basically it can spread the complete String and Arrays complete elements
 
-// hint always remember when giveing number of rows and colums give index of
-// rows and coloums rather than number of row or colomn
+// Syntax:
 
-// if we want to add multiple arrays inside one array here 2D arrays come to
-// the scence
+let iAmArray = ["a","f","h","s","w","r","b","m"];
 
-// Note: Down I also show how to edit 2d Arrays, if u want check them out
+// console.log(iAmArray);
+// see when I am printin this array it display output as Array(8) {means an Array of 8 elements}
+// but what if we want to display all the elements, we can use spread operator 
 
-let firstArray = ["Apple", "Orange", "Mango"];
-let secondArray = ["Chicken", "Meat", "Fish"];
-let thirdArray = ["IceCream", "Fries", "Sweet"];
-let fourthArray = ["Tomatto", "Onion", "Potato"];
+// EXAMPLE:
 
-// 2D Array: lets make a 2d array from all four Arrays
 
-let iAm2dArray = [firstArray, secondArray, thirdArray, fourthArray]; // A 2d array
+console.log(...iAmArray);
+// this time it is showing all the elements of array in output 
 
-for ( let D of iAm2dArray){
-    console.log(D);
-    // It is printing all the elements of total arrays
-}
-
-// manipulation of 2d arrays
-
-// we can add or remove items from 2d list by giving the targer element 
-// rows and colums index number (start with zero)
-
-// Syntax for adding or removing elements to 2d array
-// 2dArrayName[indexOfRow][indexOfColoumn] = "Content";
-
-iAm2dArray[3][1] = "Chilli"; 
-
-for ( let D of iAm2dArray){
-    console.log(D);
-    // It is printing all the elements of total arrays
-}
+//  we can also use ... method if we want to assign an array to another element
