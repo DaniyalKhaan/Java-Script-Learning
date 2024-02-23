@@ -1,47 +1,46 @@
-// Topic : Rest Parameters (...)
+// Topic: callback in functions [ very important topic]
 
-// Rest parameters also work like spread operator but instead of Arrays or 
-// Strings it works with function
+// callback : callback servers very crucial purpose in programming,
+// it call a function from a function when the funtion is finished(a ryme right)
+// like we can give a function name to another function in its parameters
+// and it will call this function when it is finished
 
-// Rest Parameters can make a function takes multiple parameters
-// Uses : suppose we have multiple variables and we need them for sum operation
-// in a funtion, now if there is scene where we just want two or maybe three
-// or any other number of arguments, so if we call that funtion with less arguments
-// it will generate error
+// we can acheive small functionalities like calculations etc whithout callback, but
+// imagagine there is a function which reads a file here you will need callback
+// so when the file reading is complete the function called the target function afterwars
 
-// SO in order to avoid this error we can use rest parameters and then 
-// we can call the funtion with parameters available it that movement, it 
-// will work with two, three , four ar any number of parameters and we
-// will not need to make multiple funtions for multiple argument senario
+// it play vital role in ascynchronious operation in java script
 
+// ok, I think this points of callback are enough for now,lets goes straight to its implementation
 
 
-// background functionality: when we use this operator it make any array for 
-// arguments and it could be one, two , or any arguments ( it accept arguments as array elements)
+
+// Example : callback funtion
+
+// Ok so I have made two funtions one for display and one is a callback funtion
+// which will take the name of the display funtion in parameters and will call
+// display(printToConsole()) but when it is finished first,
+// now lets call the callback funtion and see the result
+iAmAcallBackFunction(5, 55, printToConsole);
+// so it is working fine:
+// here are some tips about this funtion :
+// 1. when calling a callback funtion you have to give the genuone name of the 
+// target funtion without parameters as argument to the callback funtion;
 
 
-// Syntax:  funtion funtionName(...(three dots) with any name for parameter)
+function printToConsole(takeSum){
+    console.log(takeSum);
 
-// EXameple: funtion with rest parameters can accept any number of arguments
-
-function functionName(...anyName){
-
-    let addition = 0;
-
-    for (let number of anyName){
-        addition += number;
-    }
-    return addition;
 }
 
-let a = 2;
-let b = 4;
-let c = 6;
-let d = 8;
+function iAmAcallBackFunction(a, b, anyNameForCallBack){
 
-console.log(functionName(a, b));
-console.log(functionName(a, b, c, d));
-console.log(functionName(a, b, c, d, 100, 3, 43));
+    let sum = a + b;
+    anyNameForCallBack(sum);
 
-// Now see this funtion will not generate any errors and we can pass any number
-// of arguments
+
+
+}
+
+
+// there is alot more we can acheive throgh callback funtions but will see later InshaAllah
