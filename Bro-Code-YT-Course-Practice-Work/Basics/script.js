@@ -1,26 +1,38 @@
-// Topic : sorting arrays of String/numbers (Sorting: Alphabatically Accending or decending)
-// Note it can aslo sort numbers
+// Topic: 2d Arrays
 
-let someArray = ["m","o","n","e","y","is","s","o","l","u","t","i","o","n", 
-"to 85% of my problems."];
+// hint always remember when giveing number of rows and colums give index of
+// rows and coloums rather than number of row or colomn
 
+// if we want to add multiple arrays inside one array here 2D arrays come to
+// the scence
 
-someArray.sort(); // for sorting A to Z(alphabatically)
+// Note: Down I also show how to edit 2d Arrays, if u want check them out
 
-someArray.sort().reverse(); // for sorting in reverse (Z to A)
+let firstArray = ["Apple", "Orange", "Mango"];
+let secondArray = ["Chicken", "Meat", "Fish"];
+let thirdArray = ["IceCream", "Fries", "Sweet"];
+let fourthArray = ["Tomatto", "Onion", "Potato"];
 
+// 2D Array: lets make a 2d array from all four Arrays
 
-for (let i of someArray){
-    console.log(i);
+let iAm2dArray = [firstArray, secondArray, thirdArray, fourthArray]; // A 2d array
+
+for ( let D of iAm2dArray){
+    console.log(D);
+    // It is printing all the elements of total arrays
 }
 
+// manipulation of 2d arrays
 
-// it aslo works for numbers
+// we can add or remove items from 2d list by giving the targer element 
+// rows and colums index number (start with zero)
 
-let number = [7,4,6,2,6,9];
-number.sort().reverse();
-number.sort();
+// Syntax for adding or removing elements to 2d array
+// 2dArrayName[indexOfRow][indexOfColoumn] = "Content";
 
-for (let i of number){
-    console.log(i);
+iAm2dArray[3][1] = "Chilli"; 
+
+for ( let D of iAm2dArray){
+    console.log(D);
+    // It is printing all the elements of total arrays
 }
