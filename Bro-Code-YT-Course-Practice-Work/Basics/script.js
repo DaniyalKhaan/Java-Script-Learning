@@ -1,4 +1,4 @@
-// Topic : ... (spread operator)
+// Topic : spread operator "..." ( this operator unpacks elements)
 // spread operator (...) makes things very easy when we are dealing with Arrays and
 // String basically it can spread the complete String and Arrays complete elements
 
