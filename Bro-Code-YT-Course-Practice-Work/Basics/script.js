@@ -20,3 +20,8 @@ anArray.forEach(printArray);
 function printArray (arrayElements){
     console.log(arrayElements);
 }
+
+// we can also make a function inside the parameters of forEach(here) method like this
+anArray.forEach(function (g){
+    console.log(g);
+})
