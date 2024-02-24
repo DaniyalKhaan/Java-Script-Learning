@@ -73,7 +73,12 @@ let cuteKids = ["Danish","Sanan","Farooq","Saifan","Rayan"];
 function capatilizeFirstLetter(element, index, array){
 
     // array[index] = element.charAt(0).toLowerCase()+ element.slice(1);
-    array[index] = element.slice(0, 3) + element.charAt(3).toUpperCase() + element.slice(4);
+    // array[index] = element.slice(0, 3) + element.charAt(3).toUpperCase() + element.slice(4);
+    // array[index] = element.slice(0, 4) + element[4].toUpperCase() + element.slice(5);
+
+    // Now in the final example lets try to capatilze every last alphabet of elements
+
+    array[index] = element.slice(0, -1)+ element.slice(-1).toUpperCase();
 
 
 
