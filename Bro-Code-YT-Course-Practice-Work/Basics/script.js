@@ -8,10 +8,17 @@
 let numbers = [1, 2, 3, 4, 5];
 
 numbers.map(multiplyBtItself);
-numbers.map(display);
+numbers.forEach(display);   // see this is also working like forEach the output is print to the console
+// but the thing we can do in this method which was not possible in forEach is 
+// we can copy array ( can assign one array to another), see below
 
-function multiplyBtItself (elem, index, array){
-     array[index] = elem * elem;
+let copyNumbers = numbers.map(multiplyBtItself); // assigning this to new array
+for ( let n of copyNumbers){
+    console.log(n);
+}
+function multiplyBtItself (element){
+    
+    return element * element;
 
 }
 
