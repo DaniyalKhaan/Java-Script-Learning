@@ -1,27 +1,22 @@
-// Topic : ArrayMap() method
-// this method also work like forEach() but the main difference is that 
-// this method makes a copy of of array which used this method
+// Topic: array.filter() method
+
+// we can create  a new array like map() method with this method but with
+// filter ( we can set a filter/test), or a condition that just
 
 
-// example:
+let age = [16,14,24,54,54,32,21,34,14,23];
 
-let numbers = [1, 2, 3, 4, 5];
+let nonAdults = age.filter(kids);
 
-numbers.map(multiplyBtItself);
-numbers.forEach(display);   // see this is also working like forEach the output is print to the console
-// but the thing we can do in this method which was not possible in forEach is 
-// we can copy array ( can assign one array to another), see below
 
-let copyNumbers = numbers.map(multiplyBtItself); // assigning this to new array
-for ( let n of copyNumbers){
-    console.log(n);
-}
-function multiplyBtItself (element){
-    
-    return element * element;
 
+function kids(element){
+    return element < 18;
 }
 
-function display(element){
-    console.log(element);
+for ( let a of nonAdults){
+    console.log(a);
 }
+
+// one very important thing which I notice currently in that map filter methods does 
+// not do changes to the original array
