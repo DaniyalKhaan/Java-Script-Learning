@@ -1,13 +1,23 @@
-// Topic: JacaScript versions
+// Topic: window object
 
-// There are two main versions of javaScript that are used in day to day js programming
-// 1. javascript ES5, releaed in 2009
-// 2. javascript ES6, released in 2015
+// there are some/many feathures which javaScript does not have and javascript
+// access them from window object which is given by browser
 
-// normally in computer languages we use only one version which is most likely the latest version but in 
-// case of js we use both the versions at a time
+// Example:
 
-// there are some differences in both the versions like one of the main is, the jsES5 consist of only one varible data
-// type which was var, then in jsES6 let and const was introduced, at present if we use var keyword it means we are
-// using jsES5 and if in the same program we use let or const it means we are using both the version in the program
+// there is alot of features which we use in our daily programming which 
+// are not part of js but a part of browser window object, we can see and 
+// check all of them in cosole if we write window there but let me mantion seome
+// here
+
+// Examples:
+
+// window.propmt()
+// window.alert()
+// innerHTML()
+// document
+// many more
+
+// these are not the part of js instead js take these functionalities from
+// window object of browser
 
