@@ -1,22 +1,14 @@
-// Topic: array.filter() method
+// Topic: array.reduce() method
 
-// we can create  a new array like map() method with this method but with
-// filter ( we can set a filter/test), or a condition that just
+// we can reduce values of array to one value by using reduce array method
 
+// suppose we have an array in which prizes of all the products are stored
+// now we want to add all the prizes and from this can get the total value
+// we can acheive this using reduce method.
 
-let age = [16,14,24,54,54,32,21,34,14,23];
+let array = [1,2,3,4,5,5,6];
 
-let nonAdults = age.filter(kids);
-
-
-
-function kids(element){
-    return element < 18;
+array.reduce(){
+    
 }
 
-for ( let a of nonAdults){
-    console.log(a);
-}
-
-// one very important thing which I notice currently in that map filter methods does 
-// not do changes to the original array
