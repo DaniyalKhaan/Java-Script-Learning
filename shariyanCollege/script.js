@@ -1,35 +1,25 @@
-// Topic: truthy vs falsy
+// Topic: Heap Memory
 
-// there are two types of values in js one is truthy and another one is falsy
-// these are used in conditional statements
+// heap memeory can also be called temporary memory in order to perfom some
+// operation we need to store some values somewhere in our computer which at
+// the point of time not are final result/answer. see the examplt below 
+// to understand this concept clearly
 
-// falsy values: NaN, 0, undefiend, null, false and document.all
+// Example:
 
-// truthy values: any value rather than the falsy values will be truthy
+// Imagine you have to add multiple numbers and print the sum of all the numbers
+// now, what computer does it takes one value add it with another value, then
+// store sum of both the values somewhere (heap memory) then computer add third value 
+// to the sum and so on, In this example the memory which computer needs
+// to store the temprarory result/calculation is called heap memory
 
-// Example: if we use falsy values in conditional statements it will be considered as false
-// and if we give truthy values it will be considered as true
 
-// Truthy statements: the following statements contain truthy values and will be excecuted by the java interpreter
-if ( -2){
-}
-if ( 3){
-}
-if ( "ABCD"){
-}
+let num1 = 1;
+let num2 = 2;
+let num3 = 3;
+let num4 = 4;
+let num5 = 5;
 
-// falsy statements: The folowoin statements are false statements java interpreter will skip these blocks ( it will not be excecueted)
-
-if ( false ){
-}
-
-if ( 0 ){
-}
-if ( NaN ){
-}
-if ( Null ){
-}
-if ( undefined ){
-}
-if ( document.all ){
-}
+let sum = num1 + num2 + num3 + num4 + num5
+// computer will need to add the upper variable one by one and store
+// result in heap memory until the final result is not acheived
