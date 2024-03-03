@@ -20,3 +20,23 @@ and can assign original array to newly created array with this method so the
 original array is safe from risk of data manipulation
 Array.toReverse; same as abobe but it will sort the new array reversily
 */
+
+
+// EXAMPLES
+
+// Alphabetically Ascending Sort = array.sort();
+let studentsEnrolled = ["Daniyal", "Zohaib", "Yaaser", "Uzair", "Abbas", "Abdul", "Nazar"];
+studentsEnrolled.sort();  // if we assign this to newArray it will sort both arrays(to solve this see below .toSorted method)
+studentsEnrolled.forEach(displayTheArray);
+// A to Z Done!
+
+// Alphabetically desending Sort = array.reverse();
+studentsEnrolled.reverse();
+studentsEnrolled.forEach(displayTheArray);
+// Z to A Done!
+
+
+
+function displayTheArray (elem){
+    console.log(elem);
+}
