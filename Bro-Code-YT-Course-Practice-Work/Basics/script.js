@@ -1,17 +1,18 @@
-// Problem: Find an smallest or largest number of an array
-// THERE IS NO BUILT IN FUNCTION/METHOD AVAILABLE IN JS TO FIND THE SMALLES OR THE BIGGEST NUMBER IN AN ARRAY
-// WE CAN FIND IT BY THE FOLLOWING LOGIC
+// Topic : functoin expression also called anonymous function ( function without name is called function expression )
+// Note that functions expression are not hoisted in js (rest functions are hoisted) 
 
-// SOLUTION:
+// we can also make function in an expression in javaScript called function expression
+// we can assign expression functions  to variables, since function expression does not have any name
+// it will be called by the variable name it is assigned to 
+// syntax:
 
-let anArray = [3,23,4,43,55,432,445,232,234,667,645,434,678,456,574];
+let x = function (a,b){return a + b;};  // a function of type expression
 
-anArray.sort(function (a,b){return a-b;});
-// now when the array is sorted in Ascending order, index[0] contains the lowest value and indexLast[anArray.length-1] contain the highest value
-// we can print the minimum or highest value like this
-console.log(anArray[0]); // Minumum Value
-console.log(anArray[anArray.length -1]); // Highest Value
+console.log(x(2,4));
 
+// we can also use function expression with html elements like on some events following are the example;
 
+document.getElementById("button").onclick = function(){   // an function expression
+    document.getElementById("h1").textContent = "Responsible";
+}
 
-// working fine.
