@@ -1,19 +1,25 @@
-// TOPIC: ARROW(=>) FUNCTION
-// Arrow functions are also not hoisted like function expression
-// arrow function was added in jsES6(js6)
-// arrow function provide shorter function synstax( even shorter than function expression)
-// arrow function also dont accept name it should be assigned to a variable and then the name of the variable should be used to call this
+// PROBLEM : ARROW FUNCTION PROBLEM
+// IN ORDER TO UNDERSTAND THE SIMPLICITY OF ARROW FUNCTIONS LETS SORT SOME NUMARICAL ARRAYS WITH TRADITIONAL FUNCTIONS
+// AND THEN WITH ARROW FUNCTIONS TO SEE THE DIFFERENCE
 
-// SYNTAX:
-// paranthesis + arrow + statement block
-let d = () => {console.log("I am an arrow function")};
-d();
+let numbers = [2,3,5,8,3,0,9,6,4,3,5,2];
 
-let returnArrowFunction = () => {return "Return Me Please Safely"};
-// we can further minimize arrow function when working with return statements see below to further minimize the upper function
-returnArrowFunction = () => "does not need to write return also will work without block";
+// USING TRADITIONAL FUNCTIONS
+numbers.sort(desendingSort);
+numbers.sort(display);
+function desendingSort(a, b){
+    return b-a;
+}
 
-// EVEN IF YOU ARE NOT IMPRESSED YET WE CAN REMOVE THE PARAMETERS PARANTHESIS IF THE PARAMETER IS ONLY ONE
-// EXAMPLE:
-returnArrowFunction = oneValue => `One Parameter does not need paranthesis ${oneValue}`;
-console.log(returnArrowFunction(5));
+function display(elem){
+    console.log(elem);
+}
+
+// OK SO THIS IS DONE USING TRADITIONAL FUNCTIONS, NOW LETS GET THE SAME FUNCTIONLITY WITH LESS CODE USING ARROW FUNCTIONS
+
+
+// USING ARROW FUNCTIONS
+
+numbers.sort((a,b) => b-a);
+numbers.forEach(elem => {console.log(elem)});
+// DONE, NOW LETS SEE THE DIFFERENCE THIS ARROW FUNCTION CAN BE VERY USEFULL IN SOME CASES, SO REMEMBER AND IMPLEMENT THEM IN YOUR CODE MR DANI
