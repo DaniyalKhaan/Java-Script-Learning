@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basics of Java-Script</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+// TOPIC: ARROW(=>) FUNCTION
+// Arrow functions are also not hoisted like function expression
+// arrow function was added in jsES6(js6)
+// arrow function provide shorter function synstax( even shorter than function expression)
+// arrow function also dont accept name it should be assigned to a variable and then the name of the variable should be used to call this
 
+// SYNTAX:
+// paranthesis + arrow + statement block
+let d = () => {console.log("I am an arrow function")};
+d();
 
+let returnArrowFunction = () => {return "Return Me Please Safely"};
+// we can further minimize arrow function when working with return statements see below to further minimize the upper function
+returnArrowFunction = () => "does not need to write return also will work without block";
 
-
-    <script src="script.js"></script>
-</body>
-</html>
+// EVEN IF YOU ARE NOT IMPRESSED YET WE CAN REMOVE THE PARAMETERS PARANTHESIS IF THE PARAMETER IS ONLY ONE
+// EXAMPLE:
+returnArrowFunction = oneValue => `One Parameter does not need paranthesis ${oneValue}`;
+console.log(returnArrowFunction(5));
