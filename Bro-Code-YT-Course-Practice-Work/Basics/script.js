@@ -1,18 +1,43 @@
-// Topic : functoin expression also called anonymous function ( function without name is called function expression )
-// Note that functions expression are not hoisted in js (rest functions are hoisted) 
+// Topic:  object
 
-// we can also make function in an expression in javaScript called function expression
-// we can assign expression functions  to variables, since function expression does not have any name
-// it will be called by the variable name it is assigned to 
-// syntax:
 
-let x = function (a,b){return a + b;};  // a function of type expression
+// syntax:   THINGS T0 REMEMBER ABOUT THE SYNTAX
+// IN OBJECT WE USE colon : TO DECLARE A PROPERTY OR A FUNCTION 
 
-console.log(x(2,4));
+const dog = {
+    name: "riderOp",
+    color: "white",
+    weight: 25,
+    pet: true,
 
-// we can also use function expression with html elements like on some events following are the example;
+    bark: function(){
+        console.log("The dog is barking.");
+    },
 
-document.getElementById("button").onclick = function(){   // an function expression
-    document.getElementById("h1").textContent = "Responsible";
+    sleep: function(){
+
+        console.log(`The ${this.color} dog is sleeping. `);
+    },
+    doingSomething: function(action){
+        console.log(`${this.name} is ${action}`);
+    },
+    isPet: function(){
+        if (!this.pet){
+            console.log("No the dog is not a pet.")
+
+        } else if(this.pet){
+            console.log("Yes the dog is a pet.")
+        }
+    }
+
+
+
 }
+
+dog.bark();
+dog.sleep();
+dog.doingSomething("eating");
+dog.isPet();
+
+
 
