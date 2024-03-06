@@ -1,40 +1,23 @@
-// Topic: this keyword
-// this keyword point to the object in which it is used it has several functionalities, can see in w3schools
-// but the main functionlity of this keyword which I will need in future someoften is that it point to the object in which 
-// it is uses
-
-// NOTE: IF this  IS USED OUTSIDE OF ANY FUNCTIONS(GLOBALLY) IT WILL POINT TO THE window OBJECT OF BROWSER
+// Topic: classes in js
+// suppose if there is a situation where we needs many object with almost same properties we will need to write so many lines of code
+// but instead of this we can make a class place necceary methods and properties in it then we can used this as a blueprint to make many objects
 
 
-// example:
-const dog = {
-    name: "riderOp",
-    color: "white",
-    pet: true,
+// CLASSES ARE THE SAME AS JAVA IN JAVASCRIPT, A CLASS DEFINES
 
+// Syntax.
 
-    sleep: function(){
-
-        console.log(`The ${this.color} dog is sleeping. `);
-        // here this function is point to dog(liksThis: dog.color) because the function was called using dog.
-    // same for some below examples
-    },
-    doingSomething: function(action){
-        console.log(`${this.name} is ${action}`);
-    },
-    isPet: function(){
-        if (!this.pet){
-            console.log("No the dog is not a pet.")
-
-        } else if(this.pet){
-            console.log("Yes the dog is a pet.")
-        }
+class iAmClass{
+    iAmAClassMethod(){       // class method does not need to write function at declariont
+        
     }
-
-
-
 }
 
-dog.sleep();
-dog.doingSomething("eating");
-dog.isPet();
+
+const objectOne = new iAmClass();   // an object of iAmClass
+const objectSecond = new iAmClass();  // 2nd obj
+const objectThird = new iAmClass();   // 3rd obj
+const objectFourth = new iAmClass(); // 4th obj
+const objectFifth = new iAmClass();    // 5th obj 
+
+
