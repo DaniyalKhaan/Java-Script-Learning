@@ -1,19 +1,16 @@
-// Topic: forin Loop ( IT IS USED TO ITTERATE THROUGH OBJECT)
-
-// THE FOR IN LOOP ITTERATES THROUGH PROPERTIES OF OBJECTS
-
+// TOPIC: Passing functions as arguments to another functions
+// javascript allow to send a function as argument to anther function 
 
 
 
-let obj = {
-    name: "daniyal",
-    age: 23,
-    field: "IT",
-    isStudent: true
+function functionsCanAcceptFuntionsAsArguments(anyNameForFunction){
 
+    anyNameForFunction();    // you have to invoke the function you just accepted
 }
 
 
-for (let key in obj){
-    console.log(key, obj[key]);
-}
+functionsCanAcceptFuntionsAsArguments(function(){console.log("THis function was send as Argument");});
+
+
+
+
